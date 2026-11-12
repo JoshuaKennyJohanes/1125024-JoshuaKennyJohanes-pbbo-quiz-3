@@ -8,6 +8,7 @@ import java.util.List;
 
 import joshuakennyjohanes.pbo.quiz.models.BoxGeneric;
 import joshuakennyjohanes.pbo.quiz.models.ContainerGeneric;
+import joshuakennyjohanes.pbo.quiz.models.ObjekOrang;
 import joshuakennyjohanes.pbo.quiz.utils.GenericUtils;
 
 public class App {
@@ -23,30 +24,29 @@ public class App {
 
         ContainerGeneric<BoxGeneric<String>> newContainer = new ContainerGeneric<>();
         newContainer.addBox(boxInteger);    
-        newContainer.printContainer();
+        newContainer.printContainer(); 
 
 
 
+        //ekspreimen method extends Comparable dari java.lang (Hanya untuk tipe data umum)
+        List<String> listString = new ArrayList<>();
+        List<Integer> listInteger = new ArrayList<>();
+
+        listString.add("a");
+        listString.add("d");
+        listString.add("e");
+        listString.add("f");
+        listString.add("b");
+        listString.add("c");
+        GenericUtils.printListSortedUsingCollection(listString);
+        GenericUtils.printListSorted(listString);
+
+        List<ObjekOrang> rumah = new ArrayList<>();
         
-        
+        rumah.add(new ObjekOrang("Joni", 12));
+        rumah.add(new ObjekOrang("Jefri",2));
 
-
-
-        //simple generic method (print doang sama return type generic tergantung dari parameter)
-        GenericUtils newGenericUtils = new GenericUtils();
-        
-        //generic method return void, tapi pramater List<T>
-        List newList = new ArrayList<>();
-        newList.add(1);
-        newGenericUtils.printListGeneric(newList);
-
-        //generic method return <T> dan parameter List<T>
-        //--> kebetulan dimasukin dengan list tipe integer, return type generic itu defaultnya Obj
-        //sehinga bagusnya kalau sebuah method generic yang mau ngereturn, kasih extends sesuatu yang sangat mungkin bakaldipakai
-        List newStringList = new ArrayList<>();
-        newStringList.add("Test");
-        int returnnyaMethodGeneric = newGenericUtils.getListGeneric(newList);
-        
+        GenericUtils.printListSortedUsingCollection(rumah);
 
 
     }
