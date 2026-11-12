@@ -1,12 +1,13 @@
 package joshuakennyjohanes.pbo.quiz.models;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class BelajarPboList<T extends Box<T>> {
+public class BelajarPboList<T extends Box<?>>  {
     List<T> listBelajarPbo = new ArrayList<>();
 
-    public BelajarPboList(T newBox){
+    public BelajarPboList(){
     }
 
     public void add(T newBox){
@@ -14,14 +15,18 @@ public class BelajarPboList<T extends Box<T>> {
     }
 
     public void printList(){
-        for(T item : listBelajarPbo){
+        for(Box<?> item : listBelajarPbo){
             System.out.println(item.getData());
         }
     }
 
-    public <J extends Comparable<J>> void printListSorted(){
-        // Collections.sort(listBelajarPbo);
-    } 
+
+    public void printListSorted(){
+        List<T> sortedList = listBelajarPbo;
+        Collections.sort(sortedList);
+
+    }
+     
 
 
     

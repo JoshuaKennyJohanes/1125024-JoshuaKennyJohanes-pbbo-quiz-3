@@ -1,6 +1,6 @@
 package joshuakennyjohanes.pbo.quiz.models;
 
-public class Box<T> {
+public class Box<T>  {
     private T data;
     
     public Box(T data){
