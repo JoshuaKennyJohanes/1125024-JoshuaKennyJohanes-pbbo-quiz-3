@@ -3,8 +3,15 @@ package joshuakennyjohanes.pbo.quiz.utils;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class GenericUtils {
+    static Scanner input = new Scanner(System.in);
+
+    public static String readString(){
+        return input.nextLine();
+    }
+
     
     //method dengan parameter generic (Paremeternya bebas masuk apa saja), cocok kalau ada struktur data
     public <T> void printListGeneric(List<T> list){
