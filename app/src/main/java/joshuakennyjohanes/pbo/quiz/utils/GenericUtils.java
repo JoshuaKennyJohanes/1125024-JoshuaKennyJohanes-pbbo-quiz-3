@@ -54,6 +54,7 @@ public class GenericUtils {
                     T temp = sortedList.get(j);
                     sortedList.set(j, sortedList.get(j+1));
                     sortedList.set(j+1 , temp);
+                    String newString = String.parseString(1);
                 }
 
             }   

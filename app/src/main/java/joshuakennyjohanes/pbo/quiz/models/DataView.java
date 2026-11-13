@@ -92,8 +92,8 @@ public abstract  class DataView<T> {
         T foundRecords;
         for(int i = 0 ; i < records.size() ; i++){
             if(pk.equals(getPrimaryKeyValue(records.get(i)))){
-                records.remove();
-              
+                records.remove(i);
+                System.out.println("DELETE BERHASIL");
             }
 
             }
