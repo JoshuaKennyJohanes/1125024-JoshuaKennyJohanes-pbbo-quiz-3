@@ -18,7 +18,7 @@ public class GenericUtils {
     }
 
     public static String readLine(){
-        return input.nextLine();
+        return input.next();
     }
 
     

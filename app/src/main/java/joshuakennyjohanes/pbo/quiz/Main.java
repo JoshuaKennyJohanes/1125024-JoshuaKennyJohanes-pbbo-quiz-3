@@ -14,15 +14,15 @@ public class Main {
         MatakuliahDataView viewMatakuliah = new MatakuliahDataView();
 
         boolean status = true;
-        while (status) {
+        while (status) {/*  */
             int pilihanView = Menus.MenuUtama();
-            GenericUtils.readLine();
+            GenericUtils.readString();
             System.out.println();
 
             switch (pilihanView) {
                 case 1:
-                    int pilihan = Menus.MainMenu();
-                    switch (pilihan) {
+                    int pilihanMahasiswa = Menus.MainMenu();
+                    switch (pilihanMahasiswa) {
                         case 1:
                             viewMahasiswa.printAll();
                             break;
@@ -43,21 +43,61 @@ public class Main {
                         case 0:
                             status = false;
                             break;
-
                     }
-
                     break;
                 case 2:
-
+                    int pilihanMatakuliah = Menus.MainMenu();
+                    switch (pilihanMatakuliah) {
+                        case 1:
+                            viewMatakuliah.printAll();
+                            break;
+                        case 2:
+                            System.out.println("MASUKAN PK: ");
+                            String pk = GenericUtils.readString();
+                            viewMatakuliah.printByPk(pk);
+                            break;
+                        case 3:
+                            viewMatakuliah.showInsertForm();
+                            break;
+                        case 4:
+                            viewMatakuliah.showUpdateForm();
+                            break;
+                        case 5:
+                            viewMatakuliah.promptDelete();
+                            break;
+                        case 0:
+                            status = false;
+                            break;
+                    }
                     break;
                 case 3:
-
+                    int pilihanRuangan = Menus.MainMenu();
+                    switch (pilihanRuangan) {
+                        case 1:
+                            viewRuangan.printAll();
+                            break;
+                        case 2:
+                            System.out.println("MASUKAN PK: ");
+                            String pk = GenericUtils.readString();
+                            viewRuangan.printByPk(pk);
+                            break;
+                        case 3:
+                            viewRuangan.showInsertForm();
+                            break;
+                        case 4:
+                            viewRuangan.showUpdateForm();
+                            break;
+                        case 5:
+                            viewRuangan.promptDelete();
+                            break;
+                        case 0:
+                            status = false;
+                            break;
+                    }
                     break;
                 default:
                     throw new AssertionError();
             }
-
-            
 
         }
 

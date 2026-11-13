@@ -56,6 +56,7 @@ public abstract  class DataView<T> {
             System.out.println(getFields[i]+": ");
             GenericUtils.readLine();
             values[i] = GenericUtils.readString();
+            System.out.println(values[i]);
             
         }
         //tambah record baru
