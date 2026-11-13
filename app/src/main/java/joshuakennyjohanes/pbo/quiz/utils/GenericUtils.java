@@ -12,6 +12,11 @@ public class GenericUtils {
         return input.nextLine();
     }
 
+    public static int readInt(){
+        return input.nextInt();
+        
+    }
+
     
     //method dengan parameter generic (Paremeternya bebas masuk apa saja), cocok kalau ada struktur data
     public <T> void printListGeneric(List<T> list){
@@ -54,7 +59,7 @@ public class GenericUtils {
                     T temp = sortedList.get(j);
                     sortedList.set(j, sortedList.get(j+1));
                     sortedList.set(j+1 , temp);
-                    String newString = String.parseString(1);
+                    
                 }
 
             }   
