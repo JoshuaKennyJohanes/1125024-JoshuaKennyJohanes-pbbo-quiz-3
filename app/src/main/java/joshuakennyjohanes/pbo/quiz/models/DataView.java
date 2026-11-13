@@ -3,6 +3,7 @@ package joshuakennyjohanes.pbo.quiz.models;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import joshuakennyjohanes.pbo.quiz.utils.GenericUtils;
 
 
@@ -13,7 +14,6 @@ public abstract  class DataView<T> {
 
     public void printAll(){
         System.out.println("LIST RECORDS");
-
         //cetak header
         String [] headers = getFields();
         for(int i  = 0 ; i < headers.length ; i++){
@@ -54,7 +54,9 @@ public abstract  class DataView<T> {
         String[] values = new String[getFields().length];
         for(int i = 0 ; i < getFields.length ; i++){
             System.out.println(getFields[i]+": ");
+            GenericUtils.readLine();
             values[i] = GenericUtils.readString();
+            
         }
         //tambah record baru
         records.add(convertValueToModels(values));
@@ -95,13 +97,8 @@ public abstract  class DataView<T> {
                 records.remove(i);
                 System.out.println("DELETE BERHASIL");
             }
-
             }
         }
-
-
-
-    }
 
     protected abstract String getPrimaryKeyValue(T data);
 
@@ -116,3 +113,4 @@ public abstract  class DataView<T> {
     protected abstract String[] convertModelToValues(T data);
 
 }
+

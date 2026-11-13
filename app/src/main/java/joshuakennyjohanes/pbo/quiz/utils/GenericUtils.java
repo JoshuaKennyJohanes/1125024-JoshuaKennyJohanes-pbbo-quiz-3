@@ -17,6 +17,10 @@ public class GenericUtils {
         
     }
 
+    public static String readLine(){
+        return input.nextLine();
+    }
+
     
     //method dengan parameter generic (Paremeternya bebas masuk apa saja), cocok kalau ada struktur data
     public <T> void printListGeneric(List<T> list){

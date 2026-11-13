@@ -4,11 +4,13 @@ public class MataKuliah {
     private String kode;
     private String nama;
     private int jumlahSks;
+    private int semester;
 
-    public Matakuliah(String kode, String nama, int jumlahSks){
+    public MataKuliah(String kode, String nama, int jumlahSks, int semester){
         this.kode = kode;
         this.nama = nama;
         this.jumlahSks = jumlahSks;
+        this.semester = semester;
     }
 
     public String getKode(){
@@ -19,8 +21,12 @@ public class MataKuliah {
         return this.nama;
     }
 
-    public int jumlahSks(){
+    public int getJumlahSks(){
         return this.jumlahSks;
+    }
+
+    public int getSemester(){
+        return this.semester;
     }
     
 }

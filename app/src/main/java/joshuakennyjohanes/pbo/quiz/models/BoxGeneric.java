@@ -1,4 +1,4 @@
-package main.java.joshuakennyjohanes.pbo.quiz.models;
+package joshuakennyjohanes.pbo.quiz.models;
 
 //simpla generic class
 

@@ -1,7 +1,6 @@
 package joshuakennyjohanes.pbo.quiz.models;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class BelajarPboList<T extends Box<?>>  {
@@ -23,7 +22,7 @@ public class BelajarPboList<T extends Box<?>>  {
 
     public void printListSorted(){
         List<T> sortedList = listBelajarPbo;
-        Collections.sort(sortedList);
+        // Collections.sort(sortedList);
 
     }
      
