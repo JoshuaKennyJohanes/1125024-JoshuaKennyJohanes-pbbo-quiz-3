@@ -14,11 +14,19 @@ public abstract  class DataView<T> {
         System.out.println("LIST RECORDS");
 
         //cetak header
-        String [] headers = records.getFields();
+        String [] headers = getFields();
+        for(int i  = 0 ; i < headers.length ; i++){
+            System.out.print(headers[i]+"   ");
+        }
 
-
+        System.out.println();
+        //cetak isinya
         for(T item : records){
-            
+            String[] isiRecords  = convertModelToValues(item);
+            for(int i = 0 ; i < isiRecords.length ; i++){
+                System.out.print(isiRecords[i]+" ");
+            }
+            System.out.println();
         }
     }
 
